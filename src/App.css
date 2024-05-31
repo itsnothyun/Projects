@@ -1,0 +1,153 @@
+/* Ensure the body and html take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #728df1, #18bbed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the #root element */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the main app container */
+.App {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.App:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li div {
+  display: flex;
+  gap: 10px;
+}
+
+li button {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: darkred;
+}
+
+li button:first-child {
+  background-color: #007bff;
+}
+
+li button:first-child:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for completed todo items */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.completed-text {
+  margin-left: 10px;
+}
+
+.completed:hover {
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.check-all {
+  margin-right: 10px;
+  background-color: #218838; /* Change color for Check All button */
+  color: white;
+}
+
+.remove-all {
+  background-color: #dc3545; /* Change color for Remove All button */
+  color: white;
+}
+
+/* Add separate hover styles for Check All and Remove All buttons */
+.check-all:hover {
+  background-color: #1e7e34; /* Change hover color for Check All button */
+}
+
+.remove-all:hover {
+  background-color: #c82333; /* Change hover color for Remove All button */
+}
+
+
