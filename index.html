@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join our Crew</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="text-content">
+            <h2>Join our Crew</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, urna sed sodales vestibulum, mauris est dictum sapien, in hendrerit nibh nulla vitae orci.</p>
+            <a href="#" class="join-button" onclick="openPopup()">Join</a>
+        </div>
+        <div class="image-content">
+            <img src="barista.png" alt="Join our crew">
+        </div>
+    </div>
+
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="exit-button" onclick="closePopup()">&times;</span>
+            <img src="logo.png" alt="Icon" class="popup-icon">
+            <h2>Applying for a Position?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, urna sed sodales vestibulum, mauris est dictum sapien, in hendrerit nibh nulla vitae orci.</p>
+            <select id="position-select" onchange="showApplyButton()">
+                <option value="" disabled selected>Select position</option>
+                <option value="barista">Barista</option>
+                <option value="cafe-attendant">Cafe Attendant</option>
+                <option value="cafe-server">Cafe Server</option>
+                <option value="cafe-worker">Cafe Worker</option>
+                <option value="manager">Manager</option>
+            </select>
+            <div class="button-container">
+                <button class="apply-button" onclick="openApplyPopup()">Apply</button>
+                <button onclick="closePopup()" class="close-button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="apply-popup" class="popup-overlay">
+        <div class="popup-content-apply">
+            <span class="exit-button" onclick="closePopup()">&times;</span>
+            <div class="apply-left">
+                <h3>TODAY</h3>
+                <h1 id="position-title">Position Title</h1>
+                <p id="position-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt, urna sed sodales vestibulum, mauris est dictum sapien, in hendrerit nibh nulla vitae orci.</p>
+                <a href="#" class="join-button" onclick="openApplicationForm()">Apply</a>
+            </div>
+            <div class="apply-right">
+                <h2>Overview</h2>
+                <p id="overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique magna sit amet purus gravida.</p>
+                
+                <h2>Skills Required</h2>
+                <p id="skills-required">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique magna sit amet purus gravida.</p>
+                
+                <h2>What you will receive</h2>
+                <p id="what-you-will-receive">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent tristique magna sit amet purus gravida.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="application-form-popup" class="popup-overlay">
+        <span class="exit-button" onclick="closePopup()">&times;</span>
+        <div class="popup-content-application">
+        <form method="post" action="index.php" enctype="multipart/form-data">
+                <div class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" id="birthdate" name="birthdate" required>
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact_number">Contact Number</label>
+                            <input type="tel" id="contact_number" name="contact_number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Education</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="high_school">High School</label>
+                            <input type="text" id="high_school" name="high_school" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="high_school_location">Location</label>
+                            <input type="text" id="high_school_location" name="high_school_location" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="college">College</label>
+                            <input type="text" id="college" name="college" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="college_location">Location</label>
+                            <input type="text" id="college_location" name="college_location" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="graduate_school">Graduate School</label>
+                            <input type="text" id="graduate_school" name="graduate_school" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="graduate_school_location">Location</label>
+                            <input type="text" id="graduate_school_location" name="graduate_school_location" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Position</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="position_applying">Position Applying</label>
+                            <select id="position_applying" name="position_applying" required>
+                                <option value="barista">Barista</option>
+                                <option value="cafe-attendant">Cafe Attendant</option>
+                                <option value="cafe-server">Cafe Server</option>
+                                <option value="cafe-worker">Cafe Worker</option>
+                                <option value="manager">Manager</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="expected_salary">Expected Salary</label>
+                            <input type="text" id="expected_salary" name="expected_salary">
+                        </div>
+                        <div class="form-group">
+                            <label for="resume">Resume</label>
+                            <input type="file" id="resume" name="resume">
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="proceed-button" type="submit" onclick="openApplicationProcessPopup()">Proceed</button> 
+        </form>
+        </div>
+    </div> 
+    <div id="application-process-popup" class="popup-overlay">
+        <div class="popup-content-application process-form">
+            <div class="exit-container">
+                <span class="exit-button" onclick="closePopup()">&times;</span>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/9458/9458915.png " alt="Verify Photo" class="verify-photo">
+            <h2>Application in Process</h2>
+            <p>Thank you for your application! We are currently processing your information and will get back to you shortly.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
